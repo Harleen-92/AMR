@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<head>
+    <style>
+      html,body {
+      /*font: 10pt arial;*/
+      height: 100%;
+      }
+      
+      .network-div {
+          height: calc(100% - 132px);
+      }
+    </style>
+</head>
+    <main class="network-div">
+        
+        <section class="section-base section-color" style="height: 100%; background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7F1J1rz41TmY123oeiqftCDGGdcJ_sxRcdw&usqp=CAU'); background-size: cover; opacity: 0.5">
+            <div class="container">
+                <div class="cnt-box cnt-call" style="margin-top: 87px">
+                    <div class="caption" style="width: 100%!important">
+                        <h2 style="font-size: 38px; line-height: 1.5em; text-align:center">
+                            Antibiotics Stewardship is an interactive web app  to discover AI-Driven decision for AMR
+                        </h2>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+</html>

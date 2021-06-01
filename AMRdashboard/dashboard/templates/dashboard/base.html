@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | AMR</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/static/themekit/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/static/themekit/css/style.css">
+    <link rel="stylesheet" href="/static/themekit/css/glide.css">
+    <link rel="stylesheet" href="/static/themekit/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/themekit/css/content-box.css">
+    <link rel="stylesheet" href="/static/themekit/css/contact-form.css">
+    <link rel="stylesheet" href="/static/themekit/css/social.css">
+    <link rel="stylesheet" href="/static/skin.css">
+    <link rel="icon" href="/static/media/favicon.png">
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav class="menu-subtitle" data-menu-anima="fade-in">
+        <div class="container">
+            <div class="menu-brand">
+                <a href="#">
+                    <img class="logo-default scroll-hide" src="/static/themekit/media/logo.png" alt="logo" />
+                    <img class="logo-retina scroll-hide" src="/static/themekit/media/logo.png" alt="logo" />
+                    <img class="logo-default scroll-show" src="/static/themekit/media/logo.png" alt="logo" />
+                    <img class="logo-retina scroll-show" src="/static/themekit/media/logo.png" alt="logo" />
+                </a>
+            </div>
+            <i class="menu-btn"></i>
+            <div class="menu-cnt">
+                <ul id="main-menu" style="float: right">
+                    <li>
+                        <a href="/dashboard/index3">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Bayesian Networks & Predictive Modelling<span>Select Pathogens</span></a>
+                        <ul>
+                            
+                            <li class="dropdown-submenu">
+                                <a>Acinetobacter</a>
+                                <ul>
+                                    <li><a href="/dashboard/network">Bayesian Network</a></li>
+                                    <li><a href="/dashboard/modelling">Predictive Modelling</a></li>
+                        
+                                </ul>
+                            </li>   
+                            <li class="dropdown-submenu">
+                                <a>Ecoli</a>
+                                <ul>
+                                    <li><a href="/dashboard/ecoli">Bayesian Network</a></li>
+                                    <li><a href="/dashboard/ecoli-model">Predictive Modelling</a></li>
+                        
+                                </ul>
+                            </li>                    
+                            
+                        </ul>
+                    </li>
+                    <!--<li>
+                        <a href="/dashboard/modelling">Predictive Modelling<span></span></a>
+                        
+                    </li>-->
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    {% block content %} 
+
+    {% endblock %}
+    <i class="scroll-top-btn scroll-top show"></i>
+    <footer class="light">
+        <div class="footer-bar">
+            <div class="container">
+                <span>© Antimicrobial Resistance- Created by <a href="http://tavlab.iiitd.edu.in" target="_blank">Tavlab</a></span>
+                <span><a href="https://www.medrxiv.org/content/10.1101/2021.05.26.21257778v2">Reference paper</a>  <a href="#"></a></span>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="/static/themekit/media/icons/iconsmind/line-icons.min.css">
+        <script src="/static/themekit/scripts/jquery.min.js"></script>
+        <script src="/static/themekit/scripts/main.js"></script>
+       <script src="/static/themekit/scripts/parallax.min.js"></script>
+        <script src="/static/themekit/scripts/glide.min.js"></script>
+        <script src="/static/themekit/scripts/progress.js"></script>
+        <!--<script src="/static/themekit/scripts/tab-accordion.js"></script>-->
+        <script src="/static/themekit/scripts/magnific-popup.min.js"></script>
+        <script src="/static/themekit/scripts/pagination.min.js"></script>
+        <!--<script src="/static/themekit/scripts/contact-form/contact-form.js"></script>-->
+        <script src="/static/themekit/scripts/custom.js"></script>
+</body>
+</html>
