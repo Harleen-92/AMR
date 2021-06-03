@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<head>
+    <style>
+      html,body {
+      /*font: 10pt arial;*/
+      height: 100%;
+      }
+      .network-div {
+          height: calc(100% - 132px);
+      }
+    </style>
+</head>
+<body>
+    
+    <main class="network-div">       
+        <section class="section-base ">
+            <div class="container">
+                <div class="album" data-album-anima="fade-bottom" data-columns-md="2" data-columns-sm="1">
+                    <div class="album-list" style="grid-template-columns: 1fr 1fr!important">
+                        <div class="album-box">
+                            <a href="#" class="img-box img-scale">
+                                <img src="/static/klebsiella/klebsiella pneumoniae.png" alt="">
+                            </a>
+                            <div class="caption">
+                                <h3>AUROC</h3>
+                            </div>
+                        </div>
+                        <div class="album-box">
+                            <a href="#" class="img-box img-scale">
+                                <img src="/static/klebsiella/amikacin_i.png" alt="">
+                            </a>
+                            <div class="caption">
+                                <h3>Feature Importance</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cnt-album-box">
+                        <p class="album-title"><span>...</span> <a>Graph list</a></p>
+                        <div class="album-item">
+                            <div class="grid-list list-gallery" data-lightbox-anima="fade-top" data-columns="3" data-columns-md="2">
+                                <div class="grid-box">
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/klebsiella pneumoniae.png">
+                                            <img src="/static/klebsiella/klebsiella pneumoniae.png" alt="">
+                                        </a>
+                                    </div>                                 
+                                </div>
+                                <div class="list-pagination">
+                                    <ul class="pagination" data-page-items="3" data-pagination-anima="fade-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="album-item">
+                            <div class="grid-list list-gallery" data-lightbox-anima="fade-top" data-columns="3" data-columns-md="2">
+                                <div class="grid-box">
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/amikacin_i.png">
+                                            <img alt="" src="/static/klebsiella/amikacin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/amoxycillin_clavulanate_i.png">
+                                            <img alt="" src="/static/klebsiella/amoxycillin_clavulanate_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/ampicillin_i.png">
+                                            <img alt="" src="/static/klebsiella/ampicillin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/ceftazidime_i.png">
+                                            <img alt="" src="/static/klebsiella/ceftazidime_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/cefepime_i.png">
+                                            <img alt="" src="/static/klebsiella/cefepime_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/ceftriaxone_i.png">
+                                            <img alt="" src="/static/klebsiella/ceftriaxone_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/levofloxacin_i.png">
+                                            <img alt="" src="/static/klebsiella/levofloxacin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/meropenem_i.png">
+                                            <img alt="" src="/static/klebsiella/meropenem_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/tigecycline_i.png">
+                                            <img alt="" src="/static/klebsiella/tigecycline_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/klebsiella/piperacillin_tazobactam_i.png">
+                                            <img alt="" src="/static/klebsiella/piperacillin_tazobactam_i.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="list-pagination">
+                                    <ul class="pagination" data-page-items="3" data-pagination-anima="fade-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+{% endblock %}
+</html>

@@ -16,3 +16,27 @@ def ecoli(request):
 
 def ecolimodel(request):
     return render(request, 'dashboard/ecoli-model.html')
+
+def klebsiella(request):
+    return render(request, 'dashboard/klebsiella.html')
+
+def klebmodel(request):
+    return render(request, 'dashboard/kleb-model.html')
+
+def pseudomonas(request):
+    return render(request, 'dashboard/pseudomonas.html')
+
+def pseudomodel(request):
+    return render(request, 'dashboard/pseudo-model.html')
+
+def staphylococcus(request):
+    return render(request, 'dashboard/staphylococcus.html')
+
+def staphylomodel(request):
+    return render(request, 'dashboard/staphylo-model.html')
+
+def enterobacter(request):
+    return render(request, 'dashboard/enterobacter.html')
+
+def enteromodel(request):
+    return render(request, 'dashboard/entero-model.html')

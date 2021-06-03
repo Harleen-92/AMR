@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<head>
+    <style>
+      html,body {
+      /*font: 10pt arial;*/
+      height: 100%;
+      }
+      .network-div {
+          height: calc(100% - 132px);
+      }
+    </style>
+</head>
+<body>
+    
+    <main class="network-div">       
+        <section class="section-base ">
+            <div class="container">
+                <div class="album" data-album-anima="fade-bottom" data-columns-md="2" data-columns-sm="1">
+                    <div class="album-list" style="grid-template-columns: 1fr 1fr!important">
+                        <div class="album-box">
+                            <a href="#" class="img-box img-scale">
+                                <img src="/static/Staphylococcus/Staphylococcus aureus.png" alt="">
+                            </a>
+                            <div class="caption">
+                                <h3>AUROC</h3>
+                            </div>
+                        </div>
+                        <div class="album-box">
+                            <a href="#" class="img-box img-scale">
+                                <img src="/static/Staphylococcus/ceftaroline_i.png" alt="">
+                            </a>
+                            <div class="caption">
+                                <h3>Feature Importance</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cnt-album-box">
+                        <p class="album-title"><span>...</span> <a>Graph list</a></p>
+                        <div class="album-item">
+                            <div class="grid-list list-gallery" data-lightbox-anima="fade-top" data-columns="3" data-columns-md="2">
+                                <div class="grid-box">
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/Staphylococcus aureus.png">
+                                            <img src="/static/Staphylococcus/Staphylococcus aureus.png" alt="">
+                                        </a>
+                                    </div>                                 
+                                </div>
+                                <div class="list-pagination">
+                                    <ul class="pagination" data-page-items="3" data-pagination-anima="fade-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="album-item">
+                            <div class="grid-list list-gallery" data-lightbox-anima="fade-top" data-columns="3" data-columns-md="2">
+                                <div class="grid-box">
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/ceftaroline_i.png">
+                                            <img alt="" src="/static/Staphylococcus/ceftaroline_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/clindamycin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/clindamycin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/daptomycin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/daptomycin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/erythromycin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/erythromycin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/cefepime_i.png">
+                                            <img alt="" src="/static/Staphylococcus/cefepime_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/minocycline_i.png">
+                                            <img alt="" src="/static/Staphylococcus/minocycline_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/levofloxacin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/levofloxacin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/moxifloxacin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/moxifloxacin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/tigecycline_i.png">
+                                            <img alt="" src="/static/Staphylococcus/tigecycline_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/oxacillin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/oxacillin_i.png">
+                                        </a>
+                                    </div>
+                                    <div class="grid-item">
+                                        <a class="img-box" href="/static/Staphylococcus/teicoplanin_i.png">
+                                            <img alt="" src="/static/Staphylococcus/teicoplanin_i.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="list-pagination">
+                                    <ul class="pagination" data-page-items="3" data-pagination-anima="fade-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+{% endblock %}
+</html>

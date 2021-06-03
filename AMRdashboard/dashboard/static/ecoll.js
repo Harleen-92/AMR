@@ -776,19 +776,9 @@ function draw() {
    edges: edges,
  };
  var options = {
-   manipulation: {
-     enabled: true,
-     initiallyActive: false,
-     addNode: true,
-     addEdge: true,
-     editNode: undefined,
-     editEdge: true,
-     deleteNode: true,
-     deleteEdge: true,
-     controlNodeStyle:{
-       // all node options are valid.
-     }
-   },
+   /*layout: {
+       improvedLayout: true
+   },*/
    interaction: {
      dragNodes:true,
    dragView: true,
@@ -811,6 +801,27 @@ function draw() {
    zoomView: true
    },
    nodes: {
+     clustering: true,
+     scaling: {
+      min: 10,
+      max: 30,
+      label: {
+        enabled: false,
+        min: 12,
+        max: 20,
+        maxVisible: 30,
+        drawThreshold: 5
+      },
+      customScalingFunction: function (min,max,total,value) {
+        if (max === min) {
+          return 0.5;
+        }
+        else {
+          let scale = 1 / (max - min);
+          return Math.max(0,(value - min)*scale);
+        }
+      }
+    },
      borderWidth: 3,
      borderWidthSelected: 3,
      brokenImage:undefined,
@@ -837,6 +848,7 @@ function draw() {
      },
    },
    edges: {
+     physics: false,
      scaling:{
      min: 1,
      max: 8,

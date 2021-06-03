@@ -7,57 +7,46 @@ function draw() {
   // value corresponds with the age of the person
   nodes = [{
       id: 1,
-      /*value: 2,*/
       label: "CEFEPIME_I"
     },
     {
       id: 2,
-        /*value: 2,*/
       label: "CEFTAZIDIME_I"
     },
     {
       id: 3,
-        /*value: 2,*/
       label: "LEVOFLOXACIN_I"
     },
     {
       id: 4,
-        /*value: 2,*/
       label: "MEROPENEM_I"
     },
     {
       id: 5,
-        /*value: 2,*/
       label: "PIPERACILLIN_TAZOBACTAM_I"
     },
     {
       id: 6,
-      /*value: 2,*/
       label: "WGI_ESTIMATE_GOVERNMENT_EFFECTIVENESS"
     },
     {
       id: 7,
-        /*value: 2,*/
       label: "GBD_VAL_CIRRHOSIS_HEPB_PR"
     },
     {
       id: 8,
-        /*value: 2,*/
       label: "GBD_VAL_RADON"
     },
     {
       id: 9,
-      /*value: 2,*/
       label: "AMIKACIN_I"
     },
     {
       id: 10,
-      /*value: 2,*/
       label: "GBD_VAL_HEALTH_SYSTEM_ACCESS_CAPPED"
     },
     {
       id: 11,
-      /*value: 2,*/
       label: "GBD_VAL_HOSPITAL_BEDS_PER1000"
     },
   ];
@@ -305,15 +294,13 @@ function draw() {
         maxVisible: 30,
         drawThreshold: 5
       },
-      customScalingFunction: function (min,max,total,value) {
-        if (max === min) {
-          return 0.5;
-        }
-        else {
-          let scale = 1 / (max - min);
-          return Math.max(0,(value - min)*scale);
-        }
-      }
+      scaling: {
+        customScalingFunction: function(min, max, total, value) {
+          return value / total;
+        },
+        min: 5,
+        max: 150,
+      },
     },
      borderWidth: 3,
      borderWidthSelected: 3,
@@ -347,7 +334,7 @@ function draw() {
    },
      arrows: {
      to: {
-       enabled: false,
+       enabled: true,
        imageHeight: undefined,
        imageWidth: undefined,
        scaleFactor: 1,

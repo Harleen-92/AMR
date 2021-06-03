@@ -847,117 +847,139 @@ function draw() {
 
   // Instantiate our network object.
   var container = document.getElementById("mynetwork");
-  var data = {
-    nodes: nodes,
-    edges: edges,
-  };
-  var options = {
-    /*layout: {
-        improvedLayout: true
-    },*/
-    interaction: {
-      dragNodes:true,
-    dragView: true,
-    hideEdgesOnDrag: false,
-    hideEdgesOnZoom: false,
-    hideNodesOnDrag: false,
-    hover: true,
-    hoverConnectedEdges: true,
-    keyboard: {
-      enabled: false,
-      speed: {x: 10, y: 10, zoom: 0.02},
-      bindToWindow: true
-    },
-    multiselect: false,
-    navigationButtons: true,
-    selectable: true,
-    selectConnectedEdges: true,
-    tooltipDelay: 300,
-    zoomSpeed: 1,
-    zoomView: true
-    },
-    nodes: {
-      borderWidth: 3,
-      borderWidthSelected: 3,
-      brokenImage:undefined,
-      shape: "dot",
-      chosen: true,
-      color: {
-      border: '#2B7CE9',
-      background: '#97C2FC',
-      highlight: {
-        border: 'green',
-        background: '#A3E4D7'
+ var data = {
+   nodes: nodes,
+   edges: edges,
+ };
+ var options = {
+   /*layout: {
+       improvedLayout: true
+   },*/
+   interaction: {
+     dragNodes:true,
+   dragView: true,
+   hideEdgesOnDrag: false,
+   hideEdgesOnZoom: false,
+   hideNodesOnDrag: false,
+   hover: true,
+   hoverConnectedEdges: true,
+   keyboard: {
+     enabled: false,
+     speed: {x: 10, y: 10, zoom: 0.02},
+     bindToWindow: true
+   },
+   multiselect: false,
+   navigationButtons: true,
+   selectable: true,
+   selectConnectedEdges: true,
+   tooltipDelay: 300,
+   zoomSpeed: 1,
+   zoomView: true
+   },
+   nodes: {
+     clustering: true,
+     scaling: {
+      min: 10,
+      max: 30,
+      label: {
+        enabled: false,
+        min: 12,
+        max: 20,
+        maxVisible: 30,
+        drawThreshold: 5
       },
-      hover: {
-        border: 'green',
-        background: '#A3E4D7'
+      customScalingFunction: function (min,max,total,value) {
+        if (max === min) {
+          return 0.5;
+        }
+        else {
+          let scale = 1 / (max - min);
+          return Math.max(0,(value - min)*scale);
+        }
       }
     },
-      scaling: {
-        customScalingFunction: function(min, max, total, value) {
-          return value / total;
-        },
-        min: 5,
-        max: 150,
-      },
-    },
-    edges: {
-      scaling:{
-      min: 1,
-      max: 8,
-    },
-      arrows: {
-      to: {
-        enabled: false,
-        imageHeight: undefined,
-        imageWidth: undefined,
-        scaleFactor: 1,
-        src: undefined,
-        type: "arrow"
-      },
-      middle: {
-        enabled:false,
-        imageHeight: 32,
-        imageWidth: 32,
-        scaleFactor: 1,
-        src: "https://visjs.org/images/visjs_logo.png",
-        type: "image"
-      },
-      from: {
-        enabled: false,
-        imageHeight: undefined,
-        imageWidth: undefined,
-        scaleFactor: 1,
-        src: undefined,
-        type: "arrow"
-      },
-    },
-    endPointOffset: {
-      from: 0,
-      to: 0
-    },
-    arrowStrikethrough: false,
-    chosen: true,
-    /*color: {
-      color:'#848484',
-      highlight:'#1B4F72',
-      hover: '#848484',
-      inherit: 'from',
-      opacity:1.0
-    },*/
-      color: {
-      color: '#AED6F1',
-      highlight:'#1B4F72',
-      hover: '#BA4A00',
-      inherit: 'from',
-      opacity:1.0,
-    },
-  },
-  };
-  network = new vis.Network(container, data, options);
+     borderWidth: 3,
+     borderWidthSelected: 3,
+     brokenImage:undefined,
+     shape: "dot",
+     chosen: true,
+     color: {
+     border: '#2B7CE9',
+     background: '#97C2FC',
+     highlight: {
+       border: 'green',
+       background: '#A3E4D7'
+     },
+     hover: {
+       border: 'green',
+       background: '#A3E4D7'
+     }
+   },
+     scaling: {
+       customScalingFunction: function(min, max, total, value) {
+         return value / total;
+       },
+       min: 5,
+       max: 150,
+     },
+   },
+   edges: {
+    physics: false,
+     scaling:{
+     min: 1,
+     max: 8,
+   },
+     arrows: {
+     to: {
+       enabled: true,
+       imageHeight: undefined,
+       imageWidth: undefined,
+       scaleFactor: 1,
+       src: undefined,
+       type: "arrow"
+     },
+     middle: {
+       enabled:false,
+       imageHeight: 32,
+       imageWidth: 32,
+       scaleFactor: 1,
+       src: "https://visjs.org/images/visjs_logo.png",
+       type: "image"
+     },
+     from: {
+       enabled: false,
+       imageHeight: undefined,
+       imageWidth: undefined,
+       scaleFactor: 1,
+       src: undefined,
+       type: "arrow"
+     },
+   },
+   endPointOffset: {
+     from: 0,
+     to: 0
+   },
+   arrowStrikethrough: false,
+   chosen: true,
+   /*color: {
+     color:'#848484',
+     highlight:'#1B4F72',
+     hover: '#848484',
+     inherit: 'from',
+     opacity:1.0
+   },*/
+     color: {
+     color: '#AED6F1',
+     highlight:'#1B4F72',
+     hover: '#BA4A00',
+     inherit: 'from',
+     opacity:1.0,
+   },
+ },
+ };
+ network = new vis.Network(container, data, options);
 }
 
 window.addEventListener("load", () => {
-  draw();
+ draw();
 });

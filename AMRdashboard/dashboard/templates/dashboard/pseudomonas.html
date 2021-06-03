@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<head>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script type="text/javascript" src="/static/pseudomonas.js"></script>
+    <style>
+      html,body {
+      /*font: 10pt arial;*/
+      height: 100%;
+      }
+      #mynetwork {
+        width: 100%;
+        height: 100%;
+        border: 1px solid lightgray;
+      }
+      .network-div {
+          height: calc(100% - 132px);
+      }
+    </style>
+</head>
+    <main class="network-div">
+        <div id="mynetwork"></div>
+    </main>
+{% endblock %}
+
+</html>
